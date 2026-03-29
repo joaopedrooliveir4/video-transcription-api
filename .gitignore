@@ -11,7 +11,6 @@ __pycache__/
 
 # Variáveis de ambiente
 .env
-.env.*
 
 # Arquivos temporários de vídeo
 temp/
