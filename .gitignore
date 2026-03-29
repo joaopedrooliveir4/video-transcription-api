@@ -1,0 +1,28 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Arquivos temporários de vídeo
+temp/
+uploads/
+
+# PyCharm
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Alembic
+alembic/versions/*.pyc
