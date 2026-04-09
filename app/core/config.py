@@ -12,6 +12,8 @@ class Settings(BaseSettings):
     max_concurrent_jobs: int
     polling_interval: int
 
+    openai_api_key: str
+
     class Config:
         env_file = ".env"
 

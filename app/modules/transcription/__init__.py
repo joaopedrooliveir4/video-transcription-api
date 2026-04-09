@@ -1,0 +1,1 @@
+from app.modules.transcription.transcriber import transcribe_video
