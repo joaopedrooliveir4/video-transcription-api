@@ -21,6 +21,9 @@ class JobRepository:
     def get_transcription_by_hash(self, hash: str) -> Transcription:
         return self.db.query(Transcription).filter(Transcription.hash == hash).first()
 
+    def get_transcription_by_id(self, id: UUID) -> Transcription:
+        return self.db.get(Transcription, id)
+
     def update_job_status(self, id: UUID, status: str) -> Job:
         job = self.db.get(Job, id)
         job.status = status
@@ -46,4 +49,10 @@ class JobRepository:
         return self.db.query(Job).filter(Job.status == "pending").all()
 
     def get_jobs_paginated(self, page, page_size) -> List[Job]:
-        return self.db.query(Job).order_by(Job.id.desc()).limit(page_size).offset((page - 1) * page_size).all()
+        return self.db.query(Job).order_by(Job.created_at.desc()).limit(page_size).offset((page - 1) * page_size).all()
+
+    def get_logs_by_job_id(self, job_id: UUID) -> List[JobLog]:
+        return self.db.query(JobLog).filter(JobLog.job_id == job_id).order_by(JobLog.created_at.asc()).all()
+
+    def get_total_jobs(self) -> int:
+        return self.db.query(Job).count()
