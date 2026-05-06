@@ -4,6 +4,18 @@ API assíncrona para transcrição de vídeos via URL ou upload, com validação
 
 ---
 
+## Pipeline da arquitetura
+
+Fluxograma:
+<img width="989" height="660" alt="image" src="https://github.com/user-attachments/assets/23cf3758-7132-4d3e-b92b-defa42c092bc" />
+
+<img width="988" height="808" alt="image" src="https://github.com/user-attachments/assets/67d9d788-921e-4399-b7c8-16bc4af582e6" />
+
+Worker e Status Peding:
+<img width="863" height="350" alt="image" src="https://github.com/user-attachments/assets/f4501551-3306-4784-b217-ac573b6310c7" />
+
+---
+
 ## Stack
 
 | Camada | Tecnologia |
